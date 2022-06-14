@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.CostumerServiceExpertMenuController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="LogOutBtn" layoutX="9.0" layoutY="442.0" mnemonicParsing="false" onAction="#LogOut" onMouseClicked="#LogOut" prefHeight="45.0" prefWidth="103.0" style="-fx-background-color: #168900;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="STREET_VIEW" layoutX="3.0" layoutY="44.0" size="35" text="" wrappingWidth="41.428571701049805" />
+            <Text fx:id="welcomeLabel" disable="true" fill="#168900" layoutX="31.0" layoutY="34.0" text="Welcome Costumer Service Expert Employee" textAlignment="CENTER" underline="true" wrappingWidth="330.513671875">
+               <font>
+                  <Font name="Bauhaus 93" size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="manageSurvey" layoutX="112.0" layoutY="218.0" mnemonicParsing="false" onAction="#ManageSurvey" prefHeight="38.0" prefWidth="169.0" style="-fx-background-color: #168900;" text="Manage survey" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="USERS" layoutX="53.0" layoutY="250.0" size="40" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #168900;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="338.0" layoutX="16.0" layoutY="-91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="244.0" fitWidth="247.0" layoutX="73.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/manager.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="XBtn" layoutX="300.0" layoutY="7.0" mnemonicParsing="false" onAction="#X" onMouseClicked="#X" style="-fx-background-color: #ffffff;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fx:id="XIcon" fill="#168900" glyphName="TIMES" onMouseClicked="#X" size="20" />
+               </graphic>
+            </Button>
+            <Text fx:id="MarketingMenuTXT" fill="WHITE" fontSmoothingType="LCD" layoutX="4.0" layoutY="377.0" strokeType="OUTSIDE" text="This is the Store Service Expert menu" textAlignment="CENTER" wrappingWidth="331.978515625">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="MarketingMenuTXT1" fill="WHITE" fontSmoothingType="LCD" layoutX="4.0" layoutY="402.0" strokeType="OUTSIDE" text="Here you can Insert Conclusions for Surveys" textAlignment="CENTER" wrappingWidth="331.978515625">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="MarketingMenuTXT11" fill="WHITE" fontSmoothingType="LCD" layoutX="3.0" layoutY="426.0" strokeType="OUTSIDE" text="Via PDF" textAlignment="CENTER" wrappingWidth="331.978515625">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

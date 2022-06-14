@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.CEOMenuController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="LogOutBtn" layoutX="9.0" layoutY="442.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="45.0" prefWidth="103.0" style="-fx-background-color: #168900;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="STREET_VIEW" layoutX="18.0" layoutY="46.0" size="35" wrappingWidth="41.428571701049805" />
+            <Text fx:id="welcomeLabel" disable="true" fill="#168900" layoutX="51.0" layoutY="39.0" text="Welcome CEO" textAlignment="CENTER" underline="true" wrappingWidth="291.513671875">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="viewMonthlyReportBtn" layoutX="112.0" layoutY="177.0" mnemonicParsing="false" onAction="#viewMonthlyReportClicked" prefHeight="38.0" prefWidth="169.0" style="-fx-background-color: #168900;" text="view monthly report" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="LINE_CHART" layoutX="54.0" layoutY="212.0" size="40" text="" />
+            <Button fx:id="viewQuarterlyReportBtn" layoutX="112.0" layoutY="280.0" mnemonicParsing="false" onAction="#viewQuarterlyReportClicked" prefHeight="38.0" prefWidth="169.0" style="-fx-background-color: #168900;" text="view quarterly report" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="LINE_CHART" layoutX="54.0" layoutY="314.0" size="40" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #168900;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="25.0" layoutY="-98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="296.0" fitWidth="245.0" layoutX="47.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/manager.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="XBtn" layoutX="300.0" layoutY="6.0" mnemonicParsing="false" onAction="#X" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fx:id="XIcon" fill="#168900" glyphName="TIMES" onMouseClicked="#X" size="20" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.PaymentController">
+   <children>
+      <Pane layoutX="537.0" prefHeight="700.0" prefWidth="314.0" style="-fx-background-color: #168900;">
+         <children>
+            <ImageView fitHeight="255.0" fitWidth="254.0" layoutX="26.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="PlaceOrderBTN" layoutX="68.0" layoutY="645.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="44.0" prefWidth="208.0" style="-fx-background-color: #FFFFFF;" text="Place Order" textFill="#287519" />
+            <ImageView fitHeight="77.0" fitWidth="62.0" layoutX="3.0" layoutY="632.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/CompleteOrder.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="orderTotalTXT" layoutX="90.0" layoutY="619.0" prefHeight="28.0" prefWidth="171.0" text="Order Total: $0.00" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="XBtn" layoutX="277.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#clickedX" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fx:id="XIcon" fill="#168900" glyphName="TIMES" onMouseClicked="#clickedX" size="20" />
+               </graphic>
+            </Button>
+            <VBox layoutY="86.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="314.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Cart summary" textAlignment="CENTER" underline="true" wrappingWidth="315.0">
+                     <font>
+                        <Font name="Bauhaus 93" size="36.0" />
+                     </font>
+                  </Text>
+                  <ScrollPane fx:id="cartScrollPane" hbarPolicy="NEVER" pannable="true" prefHeight="472.0" prefWidth="294.0" vbarPolicy="NEVER">
+                     <content>
+                        <VBox fx:id="cartVBOX" prefHeight="470.0" prefWidth="313.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <Label fx:id="deliveryPriceTXT" layoutX="88.0" layoutY="597.0" prefHeight="28.0" prefWidth="171.0" text=" " textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Text fill="#168900" layoutX="176.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="50.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fx:id="BackBtn" fill="#168900" glyphName="ARROW_CIRCLE_LEFT" layoutX="4.0" layoutY="54.0" onMouseClicked="#Back" size="60" styleClass="btn" />
+      <Text fill="#168900" layoutX="131.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supply Method:" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="18.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supply method choosen:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="19.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store Selected:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="18.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supply Date:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="storeTXT" layoutX="118.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fx:id="supplyMethodTXT" layoutX="172.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fx:id="supplyDateTXT" layoutX="106.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fill="#168900" layoutX="284.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supply Address:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="addressTXT" layoutX="392.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fill="#168900" layoutX="287.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Name:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="nameTXT" layoutX="385.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fill="#168900" layoutX="287.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Phone:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="phoneTXT" layoutX="385.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Text>
+      <Text fill="#168900" layoutX="137.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Info" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="13.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card Number:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="300.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXP Date:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="expTXT" layoutX="365.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="429.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="cvvTXT" layoutX="466.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karmiel">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fill="#168900" glyphName="TRUCK" layoutX="61.0" layoutY="128.0" size="50" />
+      <FontAwesomeIconView fill="#168900" glyphName="CC_VISA" layoutX="62.0" layoutY="312.0" size="50" />
+      <Text fill="#168900" layoutX="13.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Store Credit:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="storeCreditTXT" layoutX="167.0" layoutY="366.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="120.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="#168900" layoutX="46.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Payment Method" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="40.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="paymentComboBox" layoutX="123.0" layoutY="454.0" onAction="#paymentOptionChoosen" prefHeight="37.0" prefWidth="237.0" promptText="Select Payment Option" style="-fx-background-color: #168900;" stylesheets="@../GuiAssests/itemCatagoryComboBox.css" />
+      <ImageView fitHeight="237.0" fitWidth="254.0" layoutX="307.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GuiAssests/PaymentMethod.png" />
+         </image>
+      </ImageView>
+      <HBox fx:id="creditCardHBOX" layoutX="7.0" layoutY="513.0" prefHeight="20.0" prefWidth="289.0" spacing="5.0">
+         <children>
+            <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit card amount: " underline="true">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cardAmountTXT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="178.0">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="45.0" prefWidth="260.0" />
+            <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="creditHBOX" layoutX="6.0" layoutY="547.0" prefHeight="20.0" prefWidth="289.0" spacing="5.0">
+         <children>
+            <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Store credit amount" underline="true">
+               <font>
+                  <Font name="Calibri Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="creditAmountTXT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="180.0">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="45.0" prefWidth="260.0" />
+            <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+               <font>
+                  <Font name="Bauhaus 93" size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <TextField fx:id="ccTXT" layoutX="145.0" layoutY="332.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="149.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text fx:id="errorTXT" fill="RED" layoutX="26.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="250.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fx:id="HelpBtn" fill="#168900" glyphName="QUESTION_CIRCLE" layoutX="488.0" layoutY="49.0" onMouseClicked="#Help" size="50" wrappingWidth="19.285714149475098" />
+      <Text fill="RED" layoutX="86.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="300.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="emailTXT" layoutX="350.0" layoutY="366.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="RED" layoutX="487.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.createSaleController">
+   <children>
+      <Text fill="RED" layoutX="289.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="23.214285373454913">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Text>
+      <Pane prefHeight="100.0" prefWidth="320.0" style="-fx-background-color: #168900;">
+         <children>
+            <ImageView fitHeight="270.0" fitWidth="300.0" layoutX="23.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="XBtn" layoutX="277.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#clickedX" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fx:id="XIcon" fill="#168900" glyphName="TIMES" onMouseClicked="#clickedX" size="20" />
+               </graphic>
+            </Button>
+            <FontAwesomeIconView fx:id="BackBtn" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="6.0" layoutY="43.0" onMouseClicked="#Back" size="50" styleClass="btn" text="" wrappingWidth="40.136710251845216" />
+            <HBox alignment="CENTER" layoutY="100.0" prefHeight="50.0" prefWidth="315.0" spacing="10.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Sale" underline="true">
+                     <font>
+                        <Font name="Bauhaus 93" size="40.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIconView fx:id="HelpBtn" fill="#168900" glyphName="QUESTION_CIRCLE" onMouseClicked="#Help" size="40" wrappingWidth="19.285714149475098">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox layoutX="7.0" layoutY="166.0" prefHeight="34.0" prefWidth="278.0" spacing="5.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="166.0" text="Product\Item ID:" textFill="#168900" underline="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="AbstractProductID" prefHeight="25.0" prefWidth="154.0" />
+            <FontAwesomeIconView fx:id="SearchByID" fill="#168900" glyphName="SEARCH" onMouseClicked="#searchByID" size="25" styleClass="btn" />
+         </children>
+      </HBox>
+      <VBox fx:id="updateHBOX" layoutX="10.0" layoutY="241.0" prefHeight="416.0" prefWidth="278.0" spacing="15.0">
+         <children>
+            <Text fx:id="nameTXT" fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" textAlignment="CENTER" underline="true" wrappingWidth="259.25439453125">
+               <font>
+                  <Font name="Calibri Bold Italic" size="25.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="ItemProductIMG" fitHeight="114.0" fitWidth="139.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/FlowerMix.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <VBox.margin>
+                  <Insets left="75.0" />
+               </VBox.margin>
+            </ImageView>
+            <HBox prefHeight="34.0" prefWidth="278.0" spacing="5.0">
+               <children>
+                  <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="115.0" text="Current Price:" textFill="#168900" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="currentPriceTXT" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="90.0">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </TextField>
+                  <FontAwesomeIconView fill="#168900" glyphName="DOLLAR" size="25" styleClass="btn" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="278.0" spacing="5.0">
+               <children>
+                  <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="117.0" text="Set Sale Price:" textFill="#168900" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="salePriceTXT" prefHeight="25.0" prefWidth="90.0" />
+                  <FontAwesomeIconView fill="#168900" glyphName="DOLLAR" size="25" styleClass="btn" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="117.0" text="Sale End Date:" textFill="#168900" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="saleEndDate" defaultColor="#168900" prefHeight="25.0" prefWidth="125.0" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="117.0" text="Sale End Time:" textFill="#168900" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTimePicker fx:id="saleEndTime" defaultColor="#168900" prefHeight="25.0" prefWidth="125.0" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="247.0" spacing="20.0">
+               <children>
+                  <FontAwesomeIconView fill="#168900" glyphName="CHECK_CIRCLE" size="50" styleClass="btn" wrappingWidth="38.2857141494751" />
+                  <Button fx:id="createSale" mnemonicParsing="false" onAction="#createSale" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #168900;" text="Create Sale" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fx:id="ErrorTXT" fill="RED" layoutX="25.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" underline="true" wrappingWidth="265.00000208616257">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.ApproveCostomerController">
+   <right>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="363.0" style="-fx-background-color: #168900;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="158.0" fitWidth="229.0" layoutX="98.0" layoutY="-38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="XBtn" layoutX="325.0" layoutY="6.0" mnemonicParsing="false" onAction="#X" prefHeight="27.0" prefWidth="33.0" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fill="#168900" glyphName="CLOSE" size="20" />
+               </graphic>
+            </Button>
+            <ImageView fitHeight="245.0" fitWidth="238.0" layoutX="63.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ApproveCostumer.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="26.0" layoutY="403.0" prefHeight="83.0" prefWidth="311.0" text="Choose the username you would like to open an authorized account for and click &quot;Import costumer&quot; to get the user details." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="#168900" glyphName="CALENDAR" layoutX="70.0" layoutY="375.0" size="25" />
+            <TextField fx:id="firstName" disable="true" layoutX="97.0" layoutY="129.0" promptText="First name" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="First name" />
+            <Button fx:id="approveCostumer" layoutX="168.0" layoutY="441.0" mnemonicParsing="false" onAction="#ApproveCostumerClicked" prefHeight="45.0" prefWidth="158.0" style="-fx-background-color: #168900;" text="Approve costumer" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font></Button>
+            <FontAwesomeIconView fill="#168900" glyphName="USER_PLUS" layoutX="27.0" layoutY="45.0" size="35" wrappingWidth="41.428571701049805" />
+            <Text fill="#168900" layoutX="76.0" layoutY="39.0" text="Approve customer" textAlignment="CENTER" underline="true" wrappingWidth="189.513671875">
+               <font>
+                  <Font name="Bauhaus 93" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cardNumberTxt" disable="true" layoutX="97.0" layoutY="311.0" promptText="Card Number" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Card Number" />
+            <TextField fx:id="cardExpirationDateTxt" disable="true" layoutX="97.0" layoutY="354.0" promptText="Card Experation Date" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Card Experation Date" />
+            <TextField fx:id="cvvTxt" disable="true" layoutX="97.0" layoutY="391.0" promptText="CVV" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="CVV" />
+            <FontAwesomeIconView fill="#168900" glyphName="CHEVRON_RIGHT" layoutX="70.0" layoutY="152.0" size="25" wrappingWidth="12.0" />
+            <FontAwesomeIconView fill="#168900" glyphName="SPINNER" layoutX="70.0" layoutY="412.0" size="25" wrappingWidth="12.0" />
+            <FontAwesomeIconView fill="#168900" glyphName="CREDIT_CARD" layoutX="68.0" layoutY="332.0" size="25" wrappingWidth="12.0" />
+            <Text fill="#168900" layoutX="14.0" layoutY="484.0" text="Back" textAlignment="CENTER">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fx:id="BackBtn" fill="#168900" glyphName="ARROW_CIRCLE_LEFT" layoutX="23.0" layoutY="463.0" onMouseClicked="#Back" size="40" styleClass="btn" wrappingWidth="55.42856979370117" />
+            <FontAwesomeIconView fill="#168900" glyphName="USER" layoutX="15.0" layoutY="91.0" size="25" wrappingWidth="12.0" />
+            <Button fx:id="importCostumerBtn" layoutX="196.0" layoutY="65.0" mnemonicParsing="false" onAction="#ImportCostumerClicked" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #168900;" text="Import customer" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="lastName" disable="true" layoutX="97.0" layoutY="174.0" promptText="Last name" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Last name" />
+            <FontAwesomeIconView fill="#168900" glyphName="CHEVRON_RIGHT" layoutX="70.0" layoutY="195.0" size="25" wrappingWidth="12.0" />
+            <TextField fx:id="phoneNumber" disable="true" layoutX="97.0" layoutY="266.0" promptText="Phone number" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Phone number" />
+            <FontAwesomeIconView fill="#168900" glyphName="PHONE" layoutX="70.0" layoutY="287.0" size="25" wrappingWidth="12.0" />
+            <TextField fx:id="email" disable="true" layoutX="97.0" layoutY="221.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Email" />
+            <FontAwesomeIconView fill="#168900" glyphName="CHEVRON_RIGHT" layoutX="70.0" layoutY="242.0" size="25" wrappingWidth="12.0" />
+            <Label layoutX="7.0" layoutY="74.0" text="*" textFill="RED" />
+            <Label layoutX="57.0" layoutY="316.0" text="*" textFill="RED" />
+            <Label layoutX="57.0" layoutY="358.0" text="*" textFill="RED" />
+            <Label layoutX="57.0" layoutY="396.0" text="*" textFill="RED" />
+            <Label id="errorLabel" fx:id="errorLabel" alignment="CENTER" layoutX="15.0" layoutY="107.0" prefHeight="22.0" prefWidth="293.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTxt" disable="true" layoutX="41.0" layoutY="69.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #168900; -fx-border-width: 0px 0px 2px 0px;" text="Username" />
+            <Label layoutX="259.0" layoutY="359.0" text="mm/yyyy" textFill="#168900" />
+            <Label layoutX="262.0" layoutY="345.0" text="Format:" textFill="#168900" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

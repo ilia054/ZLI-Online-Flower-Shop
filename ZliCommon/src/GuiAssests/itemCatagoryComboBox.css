@@ -1,0 +1,8 @@
+.combo-box > .list-cell {
+-fx-text-fill: white;
+-fx-background-radius: 50px;
+ -fx-font-size : 12pt;
+ -fx-font-weight: bold;
+}
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="365.0" spacing="6.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.ProductInCartController">
+   <children>
+      <ImageView fx:id="productIMG" fitHeight="63.0" fitWidth="70.0" pickOnBounds="true" HBox.hgrow="NEVER">
+         <image>
+            <Image url="@../GuiAssests/Amali.png" />
+         </image>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </ImageView>
+      <Label fx:id="productNameTXT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="110.0" text="Deep Purple Boquet" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="ComponenetsFXICON" fill="WHITE" glyphName="SHOPPING_BASKET" onMouseClicked="#showComponenets" size="20" wrappingWidth="17.0">
+         <HBox.margin>
+            <Insets right="3.0" />
+         </HBox.margin>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="minusFXICON" fill="#fffdfd" glyphName="MINUS_SQUARE_ALT" onMouseClicked="#decrementProductAmount" size="20" text="" wrappingWidth="13.714285850524902" />
+      <TextField fx:id="quantityTXTField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="33.0" promptText="1" style="-fx-background-color: #ffffff;">
+         <font>
+            <Font name="Cambria Bold" size="10.0" />
+         </font></TextField>
+      <FontAwesomeIconView fx:id="plusFXICON" fill="WHITE" glyphName="PLUS_SQUARE_ALT" onMouseClicked="#incrementProductAmount" size="20" />
+      <Label fx:id="priceTXT" maxHeight="-Infinity" maxWidth="-Infinity" text="\$139.99" textFill="WHITE" />
+      <FontAwesomeIconView fx:id="removeFXICON" fill="WHITE" glyphName="CLOSE" onMouseClicked="#removeFromCart" size="15" />
+   </children>
+</HBox>

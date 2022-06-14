@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="739.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.ApproveOrdersCancelationController">
+   <children>
+      <Pane prefHeight="150.0" prefWidth="900.0" style="-fx-background-color: #168900;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="190.0" fitWidth="225.0" layoutX="380.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </ImageView>
+            <Button fx:id="XBtn" layoutX="953.0" layoutY="14.0" mnemonicParsing="false" onAction="#X" onMouseClicked="#X" prefHeight="27.0" prefWidth="33.0" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fill="#168900" glyphName="CLOSE" size="20" />
+               </graphic>
+            </Button>
+            <Text fill="#168900" layoutX="251.0" layoutY="194.0" text="Approve Orders Cancelation" textAlignment="CENTER" wrappingWidth="498.2685546875">
+               <font>
+                  <Font name="Bauhaus 93" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <HBox layoutX="411.0" layoutY="623.0" prefHeight="100.0" prefWidth="246.0">
+         <children>
+            <FontAwesomeIconView fx:id="refreshBTN" fill="#168900" glyphName="REFRESH" onMouseClicked="#refreshedClicked" size="60" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="saveBTN" fill="#168900" glyphName="SAVE" onMouseClicked="#saveClicked" size="60" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <Text fill="#168900" layoutX="395.0" layoutY="714.0" text="Refresh" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#168900" layoutX="14.0" layoutY="714.0" text="Back" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Text>
+      <TableView fx:id="OrderTable" layoutX="35.0" layoutY="211.0" prefHeight="411.0" prefWidth="953.0">
+         <columns>
+            <TableColumn fx:id="orderNumber" maxWidth="152.0" minWidth="90.0" prefWidth="116.0" text="orderNumber" />
+            <TableColumn fx:id="costumerID" maxWidth="288.0" minWidth="101.0" prefWidth="101.0" styleClass="btn" text="customerID" />
+            <TableColumn fx:id="Price" maxWidth="283.0" minWidth="18.0" prefWidth="100.0" text="price" />
+            <TableColumn fx:id="estimatedDeliveryDate" maxWidth="424.0" minWidth="80.0" prefWidth="151.0" text="estimatedDeliveryDate" />
+            <TableColumn fx:id="orderDate" maxWidth="480.0" minWidth="104.0" prefWidth="196.0" text="orderDate" />
+            <TableColumn fx:id="orderStatus" maxWidth="463.0" minWidth="42.0" prefWidth="314.0" text="orderStatus" />
+         </columns>
+      </TableView>
+      <FontAwesomeIconView fx:id="BackBtn" fill="#168900" glyphName="ARROW_CIRCLE_LEFT" layoutX="16.0" layoutY="680.0" onMouseClicked="#Back" size="60" styleClass="btn" />
+      <Text fill="#168900" layoutX="526.0" layoutY="712.0" text="Save" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fill="#168900" glyphName="CART_ARROW_DOWN" layoutX="758.0" layoutY="202.0" size="55" text="" />
+      <FontAwesomeIconView fill="#168900" glyphName="HOME" layoutX="738.0" layoutY="682.0" size="40" />
+      <Label fx:id="storeName" layoutX="783.0" layoutY="651.0" prefHeight="36.0" prefWidth="123.0" textFill="#168900">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

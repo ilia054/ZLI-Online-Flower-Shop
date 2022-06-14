@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientControllers.AddNewAbstractProductController">
+   <children>
+      <Pane prefHeight="109.0" prefWidth="800.0" style="-fx-background-color: #168900;">
+         <children>
+            <Button fx:id="XBtn" layoutX="753.0" layoutY="14.0" mnemonicParsing="false" onAction="#X" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: #ffffff;">
+               <graphic>
+                  <FontAwesomeIconView fill="#168900" glyphName="CLOSE" size="25" />
+               </graphic>
+            </Button>
+            <FontAwesomeIconView fx:id="BackBtn" fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" layoutX="16.0" layoutY="54.0" onMouseClicked="#Back" size="50" styleClass="btn" wrappingWidth="40.136710251845216" />
+            <ImageView fitHeight="305.0" fitWidth="307.0" layoutX="254.0" layoutY="-98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../GuiAssests/ZLI-logos_transparent.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="errorTXT" fill="RED" layoutX="201.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ErrorTXT" textAlignment="CENTER" wrappingWidth="398.99998903274536">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#168900" layoutX="137.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create New Product\Item" textAlignment="CENTER" underline="true" wrappingWidth="538.0000071525574">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fx:id="HelpBtn1" fill="#168900" glyphName="QUESTION_CIRCLE" layoutX="655.0" layoutY="151.0" onMouseClicked="#Help" size="45" wrappingWidth="19.285714149475098" />
+         </children>
+      </Pane>
+      <VBox alignment="CENTER" layoutX="201.0" layoutY="203.0" prefHeight="400.0" prefWidth="409.0" spacing="15.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="349.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nameTXT" prefHeight="28.0" prefWidth="197.0" promptText="Please enter a Name" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="349.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Price:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="priceTXT" prefHeight="28.0" prefWidth="197.0" promptText="Please enter a Price" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="349.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Type:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="typeComboBox" onAction="#typeSelected" prefHeight="37.0" prefWidth="250.0" promptText="Choose Type" style="-fx-background-color: #168900;" stylesheets="@../GuiAssests/itemCatagoryComboBox.css" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="349.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="categoryComboBox" prefHeight="34.0" prefWidth="250.0" promptText="Choose Category" style="-fx-background-color: #168900;" stylesheets="@../GuiAssests/itemCatagoryComboBox.css" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="349.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Color:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="colorComboBox" prefHeight="37.0" prefWidth="250.0" promptText="Choose Color" style="-fx-background-color: #168900;" stylesheets="@../GuiAssests/itemCatagoryComboBox.css" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="399.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Photo:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="photoBtn" mnemonicParsing="false" onAction="#addNewPhoto" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: #168900;" text="Select Photo" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PHOTO" size="30" textAlignment="CENTER" />
+                     </graphic>
+                  </Button>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="*" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="399.0">
+               <children>
+                  <Text fill="#168900" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Components:" textAlignment="CENTER" underline="true" wrappingWidth="189.34765625" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="componentBtn" mnemonicParsing="false" onAction="#SelectComponenets" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: #168900;" text="Select Components" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PAGELINES" size="30" textAlignment="CENTER" />
+                     </graphic>
+                  </Button>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="40.13671875">
+                     <font>
+                        <Font name="Bauhaus 93" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="399.0">
+               <children>
+                  <Button fx:id="completeBtn" mnemonicParsing="false" onAction="#CompleteNewAbstractProduct" prefHeight="51.0" prefWidth="180.0" style="-fx-background-color: #168900;" text="Complete" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="30" textAlignment="CENTER" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="617.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GuiAssests/newProductItemTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="115.0" layoutX="54.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../GuiAssests/newProductV2.png" />
+         </image>
+      </ImageView>
+      <FontAwesomeIconView fx:id="HelpBtn" fill="#168900" glyphName="QUESTION_CIRCLE" layoutX="10.0" layoutY="10.0" onMouseClicked="#Help" size="40" wrappingWidth="19.285714149475098" />
+      <FontAwesomeIconView fx:id="ComponenetsFXICON" fill="#168900" glyphName="INFO_CIRCLE" layoutX="578.0" layoutY="540.0" onMouseClicked="#showComponenets" size="40" wrappingWidth="17.0" />
+   </children>
+</AnchorPane>
