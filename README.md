@@ -26,11 +26,24 @@ All of them have different functionalities,all according to the clients story
 
 **1.Customer**
                                                                         
-                                                                        Create an order
-
-
+**Create An Order**
 
 https://user-images.githubusercontent.com/88554020/173638621-4e885d7f-2f83-42c2-9d7e-300e4a53438d.mp4
+
+**2.Ceo
+View Monthly\Quarterly Quarterly**
+
+https://user-images.githubusercontent.com/88554020/173647368-f241dfcb-6544-423c-841f-d56a20e305ef.mp4
+
+**3.Marketing Employee
+
+Update Catalog,Create Sales, Edit Sales, Remove Products,Add new products.. **
+
+https://user-images.githubusercontent.com/88554020/173656850-d124a812-b206-4b79-8288-cc621dcf31c0.mp4
+
+
+
+
 
 
 
