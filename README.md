@@ -13,12 +13,19 @@ This project mimics an online flower shop, where a customer can create an order,
 
 There are several "Users" in the system:
 1.CEO
+
 2.Customers
+
 3.Customer Service employee
+
 4.Delivery Men
+
 5.Marketing Employee
+
 6.Store Manager
+
 7.Store Employee
+
 8.Customer service expert
 
 All of them have different functionalities,all according to the clients story
