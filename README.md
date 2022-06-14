@@ -26,7 +26,7 @@ All of them have different functionalities,all according to the clients story
 
 **1.Customer**
                                                                         
-                                                                        **Create an order**
+                                                                        Create an order
 
 
 
