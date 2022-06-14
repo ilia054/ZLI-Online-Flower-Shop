@@ -7,7 +7,7 @@ Zli is an online flower shop, that utilizes the OCSF java API, along side JavaFX
 
 **The project was made out of 3 parts**
 
-**1:Getting the story from the "Client" and creating UML diagrams **
+**1:Getting the story from the "Client" and creating UML diagrams**
 
 **2:Creating Package Diagrams, architecture design, UI\UX design and choosing the correct correct development method (AGILE)**
 
