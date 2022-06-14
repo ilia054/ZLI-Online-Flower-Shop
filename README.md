@@ -1,5 +1,5 @@
   # ZLI-Online-Flower-Shop
-An Distributed Flower Shop (TCP\IP) network protocol created in my 5th semester as a part of the mid througth project.
+ZLI is a Distributed Flower Shop (TCP\IP) network protocol created in my 5th semester as a part of the mid througth project.
 Zli is an online flower shop, that utilizes the OCSF java API (TCP\IP) network protocol, along side JavaFX,SceneBuilder,JFX,FontAwesome,JavaMail and more External API's.
 The project was made out of 3 parts
 1:Getting the story from the "Client" and creating UML diagrams 
@@ -25,6 +25,7 @@ All of them have different functionalities,all according to the clients story
 
 
 **1.Customer**
+                                                                        
                                                                         **Create an order**
 
 
