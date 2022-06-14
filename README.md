@@ -48,6 +48,15 @@ Update Catalog,Create Sales, Edit Sales, Remove Products,Add new products.. **
 
 https://user-images.githubusercontent.com/88554020/173656850-d124a812-b206-4b79-8288-cc621dcf31c0.mp4
 
+**4.Store Manager
+
+Approve new customers,Manage store staff permissions,Approve order cancelation's,Approve new orders**
+
+
+https://user-images.githubusercontent.com/88554020/173660360-91912086-bf57-40dc-a08b-3297a15d3215.mp4
+
+
+
 
 
 
